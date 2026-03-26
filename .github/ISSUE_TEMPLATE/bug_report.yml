@@ -1,0 +1,60 @@
+name: "Bug report"
+about: Report something that is not working
+labels: bug
+---
+## Summary
+Brief explanation of the bug.
+
+### Steps to reproduce
+1. Go to '...'
+2. Click on '...'
+3. See error
+
+### Expected behaviour
+What should have happened instead?
+
+name: Bug report
+description: Report a bug in SafeRoute
+labels: [bug]
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: What is happening and what did you expect to happen?
+      placeholder: |
+        Example:
+          "When I submit an incident report, the map doesn't update..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: other-details
+    attributes:
+      label: Other details
+      placeholder: |
+        Screenshots, logs, browser, OS, or any additional context.
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Acknowledgements
+      description: Read this carefully, we will close and ignore your issue if you skimmed through this.
+      options:
+        - label: I have searched the existing issues and this is a new ticket, **NOT** a duplicate or related to another open or closed issue.
+          required: true
+        - label: I have written a short but informative title.
+          required: true
+        - label: I will fill out all of the requested information in this form.
+          required: true
