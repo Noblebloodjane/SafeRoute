@@ -1,18 +1,3 @@
-name: "Bug report"
-about: Report something that is not working
-labels: bug
----
-## Summary
-Brief explanation of the bug.
-
-### Steps to reproduce
-1. Go to '...'
-2. Click on '...'
-3. See error
-
-### Expected behaviour
-What should have happened instead?
-
 name: Bug report
 description: Report a bug in SafeRoute
 labels: [bug]
