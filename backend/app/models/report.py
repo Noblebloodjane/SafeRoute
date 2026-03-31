@@ -14,18 +14,18 @@ if TYPE_CHECKING:
     from app.models.app_user import AppUser
     from app.models.location import Location
     from app.models.media import Media
-    from app.models.report_audit_log import ReportAuditing
+    from app.models.report_audit_log import ReportAuditLog
 
 
 class Report(Base, TimestampMixin):
     __tablename__ = "report"
     __table_args__ = (
-        Index("ix_report_reporter_id", "reporter_id"),
-        Index("ix_report_location_id", "location_id"),
-        Index("ix_report_status", "status"),
-        Index("ix_report_severity", "severity"),
-        Index("ix_report_incident_at", "incident_at"),
-        Index("ix_report_reference_no", "reference_no"),
+        Index("idx_report_reporter_id", "reporter_id"),
+        Index("idx_report_location_id", "location_id"),
+        Index("idx_report_status", "status"),
+        Index("idx_report_severity", "severity"),
+        Index("idx_report_incident_at", "incident_at"),
+        Index("idx_report_reference_no", "reference_no"),
         {"schema": "safe_route"},
     )
 

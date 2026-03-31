@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     # Expose a sync URL for Alembic which runs migrations synchronously
     @property
     def sync_database_url(self) -> str:
-        return self.DATABASE_URL.replace("+asyncpg", "+pysycopg2")
+        return self.DATABASE_URL.replace("+asyncpg", "+psycopg2")
 
     model_config = {"env_file": ".env"}
 
